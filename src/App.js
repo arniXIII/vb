@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUp, Facebook, Instagram, Twitter } from "lucide-react";
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUp, Facebook, Instagram, Twitter } from 'lucide-react';
 
 export default function HomePage() {
   const [showTopArrow, setShowTopArrow] = useState(false);
