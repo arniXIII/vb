@@ -63,7 +63,7 @@ export default function HomePage() {
       <section id="sponsors" className="py-16 px-4 text-center bg-white bg-opacity-5">
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <div className="flex justify-center flex-wrap gap-6">
-            {["/sponsor1.png", "/sponsor2.png", "/sponsor3.png", "/sponsor4.png", "/sponsor5.png", "/sponsor6.png"].map((logo, i) => (
+            {["vb/sponsor1.png", "vb/sponsor2.png", "vb/sponsor3.png", "vb/sponsor4.png", "vb/sponsor5.png", "vb/sponsor6.png"].map((logo, i) => (
   <img key={i} src={logo} alt={`Sponsor ${i + 1}`} className="w-32 h-16 object-contain bg-white rounded-lg p-2" />
 ))}
           </div>
@@ -91,7 +91,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">Media Gallery</h2>
           <p className="text-lg mb-10">Photos and videos will be available here after the tournament.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-           {["/media1.jpg", "/media2.jpg", "/media3.jpg", "/media4.jpg", "/media5.jpg", "/media6.jpg", "/media7.jpg", "/media8.jpg"].map((img, i) => (
+           {["vb/media1.jpg", "vb/media2.jpg", "vb/media3.jpg", "vb/media4.jpg", "vb/media5.jpg", "vb/media6.jpg", "vb/media7.jpg", "vb/media8.jpg"].map((img, i) => (
   <img key={i} src={img} alt={`Media ${i + 1}`} className="w-full h-48 object-cover rounded-xl" />
 ))}
           </div>
