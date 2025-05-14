@@ -7,7 +7,7 @@ export default function HomePage() {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
 
   useEffect(() => {
-    document.title = "Beach Volleyball Tournament";
+    document.title = "Akali4";
 
     const links = document.querySelectorAll("a[href^='#']");
     links.forEach((link) => {
@@ -42,17 +42,12 @@ export default function HomePage() {
   return (
     <div className="bg-black text-white relative">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 w-full z-50 py-4 px-8 flex justify-center items-center shadow-md transition-colors duration-500 ${isHeroVisible ? "bg-black bg-opacity-60" : "bg-black"}`}>
-        <h1 className="text-xl font-bold text-center">🏐 Beach Volley</h1>
-        <div className="absolute right-8 space-x-6 text-lg">
-          <a href="#hero" className="hover:text-yellow-400">Home</a>
-          <a href="#events" className="hover:text-yellow-400">Events</a>
-          <a href="#gallery" className="hover:text-yellow-400">Gallery</a>
-        </div>
+      <nav className={`nav-inner-shadow fixed top-0 left-0 w-full z-50 py-4 px-8 flex justify-center items-center transition-colors duration-500 ${isHeroVisible ? "bg-black bg-opacity-0" : "bg-black"}`}>
+        <img src="logo.png" alt="Beach Volley Logo" className="h-12 object-contain" />
       </nav>
 
       {/* Hero Section */}
-      <div id="hero" className="relative h-[78vh] w-full overflow-hidden pt-16">
+      <div id="hero" className="relative h-[80vh] w-full overflow-hidden pt-16">
         <div
           className="absolute top-0 left-0 w-full h-full bg-no-repeat bg-center bg-contain"
           style={{ backgroundImage: "url('https://avp.com/wp-content/uploads/AVP-2025-WEBSITE-3.0-dark-1800x1013.png')" }}
@@ -63,7 +58,7 @@ export default function HomePage() {
       <section id="sponsors" className="py-16 px-4 text-center bg-white bg-opacity-5">
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <div className="flex justify-center flex-wrap gap-6">
-            {["vb/sponsor1.png", "vb/sponsor2.png", "vb/sponsor3.png", "vb/sponsor4.png", "vb/sponsor5.png", "vb/sponsor6.png"].map((logo, i) => (
+            {["/sponsor1.png", "/sponsor2.png", "/sponsor3.png", "/sponsor4.png", "/sponsor5.png", "/sponsor6.png"].map((logo, i) => (
   <img key={i} src={logo} alt={`Sponsor ${i + 1}`} className="w-32 h-16 object-contain bg-white rounded-lg p-2" />
 ))}
           </div>
@@ -73,13 +68,13 @@ export default function HomePage() {
 {/* Event Section */}
       <section id="events" className="py-16 px-4 text-center">
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Upcoming Events</h2>
-          <p className="text-lg mb-10">Stay tuned! Event schedule will be released soon.</p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Következő esemény</h2>
+          <p className="text-lg mb-10">Az ország legnagyobb 4v4 strandröplabda bajnoksága!</p>
           <div className="max-w-xl mx-auto">
             <div className="bg-white text-black p-6 rounded-2xl shadow-xl">
-              <h3 className="text-xl font-bold mb-2">Main Event</h3>
-              <p>Date: TBD</p>
-              <p>Location: TBD</p>
+              <h3 className="text-xl font-bold mb-2">XXI. Akali4 Strandröplabda Bajnokság</h3>
+              <p>Dátum: 2025. Augusztus 18.</p>
+              <p>Helyszín: Mandulavirág Strand, Balatonakali</p>
             </div>
           </div>
         </motion.div>
@@ -88,14 +83,14 @@ export default function HomePage() {
       {/* Media Gallery */}
       <section id="gallery" className="py-16 px-4 text-center bg-gray-900">
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Media Gallery</h2>
-          <p className="text-lg mb-10">Photos and videos will be available here after the tournament.</p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Galéria</h2>
+          <p className="text-lg mb-10">Képek és videók a bajnokságról.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-           {["vb/media1.jpg", "vb/media2.jpg", "vb/media3.jpg", "vb/media4.jpg", "vb/media5.jpg", "vb/media6.jpg", "vb/media7.jpg", "vb/media8.jpg"].map((img, i) => (
+           {["/media1.jpg", "/media2.jpg", "/media3.jpg", "/media4.jpg", "/media5.jpg", "/media6.jpg", "/media7.jpg", "/media8.jpg"].map((img, i) => (
   <img key={i} src={img} alt={`Media ${i + 1}`} className="w-full h-48 object-cover rounded-xl" />
 ))}
           </div>
-          <a href="/media" className="text-yellow-400 hover:underline">View All Media</a>
+          <a href="/media" className="text-yellow-400 hover:underline">Teljes galéria</a>
         </motion.div>
       </section>
 
